@@ -1,0 +1,2 @@
+com/example/MyFirstProject/MyFirstProjectApplicationTests.java
+ com.example.MyFirstProject.MyFirstProjectApplicationTests
