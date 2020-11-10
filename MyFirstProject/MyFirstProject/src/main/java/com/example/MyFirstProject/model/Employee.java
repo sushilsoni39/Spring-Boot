@@ -1,29 +1,31 @@
 package com.example.MyFirstProject.model;
+
 import javax.persistence.*;
 
 @Entity
 @Table(name = "EMPLOYEE")
 public class Employee {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name="id", insertable=true, updatable=true, unique=true, nullable=false)
+
     private Integer id;
     @Column(name = "name")
     private String name;
-    @Column(name="number")
+    @Column(name = "number")
     private long number;
     @Column(name = "email")
     private String email;
 
     public Employee() {
     }
+
     public Employee(Integer id, String name, long number, String email) {
         this.id = id;
         this.name = name;
-        this.number=number;
+        this.number = number;
         this.email = email;
     }
-
 
 
     public Integer getId() {
